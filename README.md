@@ -25,8 +25,8 @@ python ./Pytorch_V1/test.py
 ##### Results
 
 Use the trained model to do segmentation on test images, the result is statisfactory.
-<img src="demo/Test0_data.png" alt="Test0 data" width="600"/>
-
+<img src="demo/Test0_data.png" alt="Test0 data" width="500"/>
+<img src="demo/Test0_label.png" alt="Test0 label" width="500"/>
 <!-- ![demo/Test0_data.png](demo/Test0_data.png)
 
 ![img/Test0_label.png](demo/Test0_label.png) -->
