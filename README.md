@@ -26,9 +26,9 @@ The model is trained for >200 epochs.
 
 Use the trained model to do segmentation on test images, the result is statisfactory.
 
-![img/0test.png](img/0test.png)
+![demo/Test0_data.png](img/0test.png)
 
-![img/0label.png](img/0label.png)
+![img/Test0_label.png](img/0label.png)
 
 ### Numpy Version
 #### Dependencies
