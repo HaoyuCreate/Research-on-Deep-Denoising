@@ -24,12 +24,11 @@ python ./Pytorch_V1/test.py
 
 ##### Results
 
-Use the trained model to do segmentation on test images, the result is statisfactory.
+Use the trained model to do denoise self-synthesied noisy 1D signal. Network is programed by Pytorch.
 <img src="demo/Test0_data.png" alt="Test0 data" width="500"/>
 <img src="demo/Test0_label.png" alt="Test0 label" width="500"/>
-<!-- ![demo/Test0_data.png](demo/Test0_data.png)
-
-![img/Test0_label.png](demo/Test0_label.png) -->
+<img src="demo/Test0_Torch_pred_Unfixed_batch.png" alt="Unfixed pred" width="500"/>
+<img src="demo/Test0_Weiner_pred.png" alt="Wiener pred" width="500"/>
 
 ### Numpy Version
 #### Dependencies
@@ -44,3 +43,8 @@ python pth2h5.py
 python ./Numpy_V2/Numpy_test.py
 
 #### Results
+Use the trained model to do denoise self-synthesied noisy 1D signal. Network is programed by Numpy.
+<img src="demo/Test1_data.png" alt="Test0 data" width="500"/>
+<img src="demo/Test1_label.png" alt="Test0 label" width="500"/>
+<img src="demo/Test1_Numpy_pred_Unfixed_batch.png" alt="Unfixed pred" width="500"/>
+<img src="demo/Test1_Weiner_pred.png" alt="Wiener pred" width="500"/>
