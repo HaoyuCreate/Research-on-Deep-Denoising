@@ -27,11 +27,11 @@ python ./Pytorch_V1/test.py
 Use the trained model to denoise self-synthesied noisy 1D signals. Network is programed by Pytorch.
 <img src="demo/Test0_data.png" alt="Test0 data" width="500"/>
 <img src="demo/Test0_label.png" alt="Test0 label" width="500"/>
-<img src="demo/Test0_Torch_pred_Unfixed_batch.png" alt="Unfixed pred" width="510"/>
-<img src="demo/Test0_Weiner_pred.png" alt="Wiener pred" width="510"/>
-<img src="demo/Test0_Torch_pred_Fixed_batch.png" alt="Unfixed pred" width="510"/>
-<img src="demo/Test0_Weiner_pred.png" alt="Fixed pred" width="520"/>
-<img src="demo/Test0_Numpy_L1_pred.png" alt="Li-norm pred" width="510"/>
+<img src="demo/Test0_Torch_pred_Unfixed_batch.png" alt="Unfixed pred" width="505"/>
+<img src="demo/Test0_Weiner_pred.png" alt="Wiener pred" width="505"/>
+<img src="demo/Test0_Torch_pred_Fixed_batch.png" alt="Unfixed pred" width="505"/>
+<img src="demo/Test0_Weiner_pred.png" alt="Fixed pred" width="505"/>
+<img src="demo/Test0_Numpy_L1_pred.png" alt="Li-norm pred" width="505"/>
 
 
 ### Numpy Version
