@@ -27,8 +27,12 @@ python ./Pytorch_V1/test.py
 Use the trained model to do denoise self-synthesied noisy 1D signal. Network is programed by Pytorch.
 <img src="demo/Test0_data.png" alt="Test0 data" width="500"/>
 <img src="demo/Test0_label.png" alt="Test0 label" width="500"/>
-<img src="demo/Test0_Torch_pred_Unfixed_batch.png" alt="Unfixed pred" width="500"/>
-<img src="demo/Test0_Weiner_pred.png" alt="Wiener pred" width="500"/>
+<img src="demo/Test0_Torch_pred_Unfixed_batch.png" alt="Unfixed pred" width="520"/>
+<img src="demo/Test0_Weiner_pred.png" alt="Wiener pred" width="520"/>
+<img src="demo/Test0_Torch_pred_Fixed_batch.png" alt="Unfixed pred" width="520"/>
+<img src="demo/Test0_Weiner_pred.png" alt="Fixed pred" width="520"/>
+<img src="demo/Test0_Numpy_L1_pred.png" alt="Li-norm pred" width="520"/>
+
 
 ### Numpy Version
 #### Dependencies
@@ -46,5 +50,8 @@ python ./Numpy_V2/Numpy_test.py
 Use the trained model to do denoise self-synthesied noisy 1D signal. Network is programed by Numpy.
 <img src="demo/Test1_data.png" alt="Test0 data" width="500"/>
 <img src="demo/Test1_label.png" alt="Test0 label" width="500"/>
-<img src="demo/Test1_Numpy_pred_Unfixed_batch.png" alt="Unfixed pred" width="500"/>
-<img src="demo/Test1_Weiner_pred.png" alt="Wiener pred" width="500"/>
+<img src="demo/Test1_Numpy_pred_Unfixed_batch.png" alt="Unfixed pred" width="520"/>
+<img src="demo/Test1_Weiner_pred.png" alt="Wiener pred" width="520"/>
+<img src="demo/Test1_Numpy_pred_Fixed_batch.png" alt="Unfixed pred" width="520"/>
+<img src="demo/Test1_Weiner_pred.png" alt="Fixed pred" width="520"/>
+<img src="demo/Test1_Numpy_L1_pred.png" alt="Li-norm pred" width="520"/>
