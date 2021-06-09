@@ -30,9 +30,7 @@ Use the trained model to denoise self-synthesied noisy 1D signals. Network is pr
 <img src="demo/Test1_Torch_pred_Unfixed_batch.png" alt="Unfixed pred" width="502"/>
 <img src="demo/Test1_Weiner_pred.png" alt="Wiener pred" width="502"/>
 <img src="demo/Test1_Torch_pred_Fixed_batch.png" alt="Unfixed pred" width="502"/>
-<img src="demo/Test1_Weiner_pred.png" alt="Fixed pred" width="502"/>
 <img src="demo/Test1_Numpy_L1_pred.png" alt="Li-norm pred" width="502"/>
-<img src="demo/Test1_Numpy_GMC_pred.png" alt="Li-norm pred" width="502"/>
 
 
 ### Numpy Version
@@ -54,7 +52,5 @@ Use the trained model to denoise self-synthesied noisy 1D signals. Network is pr
 <img src="demo/Test0_Torch_pred_Unfixed_batch.png" alt="Unfixed pred" width="502"/>
 <img src="demo/Test0_Weiner_pred.png" alt="Wiener pred" width="502"/>
 <img src="demo/Test0_Torch_pred_Fixed_batch.png" alt="Unfixed pred" width="502"/>
-<img src="demo/Test0_Weiner_pred.png" alt="Fixed pred" width="502"/>
 <img src="demo/Test0_Numpy_L1_pred.png" alt="Li-norm pred" width="502"/>
-<img src="demo/Test0_Numpy_GMC_pred.png" alt="Li-norm pred" width="502"/>
 
