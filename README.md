@@ -16,19 +16,19 @@ This tutorial depends on the following libraries:
 
 #### Training
 
-The model is trained for >200 epochs.
+python ./Pytorch_V1/train.py
 
 #### Testing
-
+python ./Pytorch_V1/test.py
 
 
 ##### Results
 
 Use the trained model to do segmentation on test images, the result is statisfactory.
 
-![demo/Test0_data.png](img/0test.png)
+![demo/Test0_data.png](demo/Test0_data.png)
 
-![img/Test0_label.png](img/0label.png)
+![img/Test0_label.png](demo/Test0_label.png)
 
 ### Numpy Version
 #### Dependencies
