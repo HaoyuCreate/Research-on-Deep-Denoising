@@ -396,7 +396,7 @@ if __name__=='__main__':
 
         figwinner = plt.figure(figsize=(50,40))
         plt.plot(weinerPred)
-        plt.title('Denoised data (Winer Filter)',fontsize=70)
+        plt.title('Denoised data (Winer filter\'s)',fontsize=70)
         plt.annotate('RMSE %0.2f'%rmse(weinerPred-label),xy=(300,1900),fontsize=90,xycoords='figure points')
         plt.annotate('PSNR %0.2f'%psnr(weinerPred-label),xy=(300,1800),fontsize=90,xycoords='figure points')
         figwinner.savefig('./Figs/{}_Numpy_Weiner_pred.png'.format(name),bbox_inches='tight',pad_inches=0.0)
@@ -407,7 +407,7 @@ if __name__=='__main__':
         
         figL1 = plt.figure(figsize=(50,40))
         plt.plot(L1Pred)
-        plt.title('Denoised data (L1-norm Filter)',fontsize=70)
+        plt.title('Denoised data (L1-norm filter)',fontsize=70)
         plt.annotate('RMSE %0.2f'%rmse(L1Pred-label),xy=(300,1900),fontsize=90,xycoords='figure points')
         plt.annotate('PSNR %0.2f'%psnr(L1Pred-label),xy=(300,1800),fontsize=90,xycoords='figure points')
         figL1.savefig('./Figs/{}_Numpy_L1_pred.png'.format(name),bbox_inches='tight',pad_inches=0.0)
@@ -416,7 +416,7 @@ if __name__=='__main__':
         GMCPred = process_GMC(sig.squeeze())
         figGMC = plt.figure(figsize=(50,40))
         plt.plot(GMCPred)
-        plt.title('Denoised data (GMC-norm Filter)',fontsize=70)
+        plt.title('Denoised data (GMC-norm filter)',fontsize=70)
         plt.annotate('RMSE %0.2f'%rmse(GMCPred-label),xy=(300,1900),fontsize=90,xycoords='figure points')
         plt.annotate('PSNR %0.2f'%psnr(GMCPred-label),xy=(300,1800),fontsize=90,xycoords='figure points')
         figGMC.savefig('./Figs/{}_Numpy_GMC_pred.png'.format(name),bbox_inches='tight',pad_inches=0.0)

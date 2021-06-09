@@ -126,8 +126,8 @@ def main2(net,name,net_weights):
         for a given input (one batch),e.g. Test1_label.txt
     '''
     net.load_state_dict(net_weights)
-    ##net.eval()
-    net.train()
+    net.eval()
+    #net.train()
     _labels,_data = list(),list()
     
     for _ in range(argparse.batch_size):_labels.append(loading_data('../TestSamples/{}_label.txt'.format(name)))
@@ -177,7 +177,7 @@ if __name__=='__main__':
         plt.title('Denoised data (Our Pytorch\'s)',fontsize=70)
         plt.annotate('RMSE %0.2f'%rmse(fig_pred-fig_label),xy=(300,1900),fontsize=90,xycoords='figure points')
         plt.annotate('PSNR %0.2f'%psnr(fig_pred-fig_label),xy=(300,1800),fontsize=90,xycoords='figure points')
-        figpred.savefig(ops.join(argparse.fig_dir,'{}_Torch_pred_Unfixed_batch.png'.format(name)),bbox_inches='tight',pad_inches=0.0)
+        figpred.savefig(ops.join(argparse.fig_dir,'{}_Torch_pred_Fixed_batch.png'.format(name)),bbox_inches='tight',pad_inches=0.0)
 
         figlabel = plt.figure(figsize=(50,40))
         plt.plot(fig_label)
@@ -191,7 +191,7 @@ if __name__=='__main__':
 
         figweinerpred = plt.figure(figsize=(50,40))
         plt.plot(fig_weiner_pred)
-        plt.title('Denoised data (Our Pytorch\'s)',fontsize=70)
+        plt.title('Denoised data (Wienner filter\'s)',fontsize=70)
         plt.annotate('RMSE %0.2f'%rmse(fig_weiner_pred-fig_label),xy=(300,1900),fontsize=90,xycoords='figure points')
         plt.annotate('PSNR %0.2f'%psnr(fig_weiner_pred-fig_label),xy=(300,1800),fontsize=90,xycoords='figure points')
         figweinerpred.savefig(ops.join(argparse.fig_dir,'{}_Weiner_pred.png'.format(name)),bbox_inches='tight',pad_inches=0.0)
