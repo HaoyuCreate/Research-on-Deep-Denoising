@@ -1,0 +1,82 @@
+import numpy as np
+
+import torch
+import torch.nn as nn
+import torch.nn.parallel
+from torch.autograd import Variable
+import torch.nn.functional as F
+from .NN2D_parts import * # for training and testing
+from .NN1D_parts import *
+# from NN2D_parts import * # for code debuging 
+# from NN1D_parts import *
+
+
+class UNet2D(nn.Module):
+    def __init__(self, n_channels, n_classes, bilinear=True):
+        super(UNet, self).__init__()
+        self.n_channels = n_channels
+        self.n_classes = n_classes
+        self.bilinear = bilinear
+
+        self.inc = DoubleConv(n_channels, 64)
+        self.down1 = Down(64, 128)
+        self.down2 = Down(128, 256)
+        self.down3 = Down(256, 512)
+        factor = 2 if bilinear else 1
+        self.down4 = Down(512, 1024 // factor)
+        self.up1 = Up(1024, 512 // factor, bilinear)
+        self.up2 = Up(512, 256 // factor, bilinear)
+        self.up3 = Up(256, 128 // factor, bilinear)
+        self.up4 = Up(128, 64, bilinear)
+        self.outc = OutConv(64, n_classes)
+
+    def forward(self, x):
+        x1 = self.inc(x)
+        x2 = self.down1(x1)
+        x3 = self.down2(x2)
+        x4 = self.down3(x3)
+        x5 = self.down4(x4)
+        x = self.up1(x5, x4)
+        x = self.up2(x, x3)
+        x = self.up3(x, x2)
+        x = self.up4(x, x1)
+        logits = self.outc(x)
+        return logits
+
+class UNet1D(nn.Module):
+    def __init__(self, n_channels, n_classes, bilinear=True):
+        super(UNet1D, self).__init__()
+        self.n_channels = n_channels
+        self.n_classes = n_classes
+        self.bilinear = bilinear
+
+        self.inc = DoubleConv1D(n_channels, 64)
+        self.down1 = Down1D(64, 128)
+        self.down2 = Down1D(128, 256)
+        self.down3 = Down1D(256, 512)
+        factor = 2 if bilinear else 1
+        self.down4 = Down1D(512, 1024 // factor)
+        self.up1 = Up1D(1024, 512 // factor, bilinear)
+        self.up2 = Up1D(512, 256 // factor, bilinear)
+        self.up3 = Up1D(256, 128 // factor, bilinear)
+        self.up4 = Up1D(128, 64, bilinear)
+        self.outc = OutConv1D(64, n_classes)
+
+    def forward(self, x):
+        x1 = self.inc(x)
+        x2 = self.down1(x1)
+        x3 = self.down2(x2)
+        x4 = self.down3(x3)
+        x5 = self.down4(x4)
+        x = self.up1(x5, x4)
+        x = self.up2(x, x3)
+        x = self.up3(x, x2)
+        x = self.up4(x, x1)
+        logits = self.outc(x)
+        return logits
+
+if __name__=='__main__':
+    net = UNet1D(1,1)
+    x = torch.randn(2,1,100)
+    y = net(x)
+    print(y.size())
