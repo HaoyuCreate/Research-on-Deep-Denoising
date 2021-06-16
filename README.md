@@ -6,7 +6,7 @@ The architecture was inspired by [U-Net: Convolutional Networks for Biomedical I
 
 ## Overview
 
-### Pytorch Version
+### 1. Pytorch Version
 #### Dependencies
 
 This tutorial depends on the following libraries:
@@ -34,7 +34,7 @@ Use the trained model to denoise self-synthesied noisy 1D signals. Network is pr
 
 
 
-### Numpy Version
+### 2. Numpy Version
 #### Dependencies
 * Numpy
 * skimage
