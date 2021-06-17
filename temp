@@ -1,0 +1,6 @@
+where $MEAN$ is a global or a local mean ($E(x)$) and $VAR$ is a global or a local variance, $\gamma$ and $\beta$ are two learned variables. Compared with Equation \ref{eq:wienerfilter}, the batch normalization layer realise similar functions as a local-mean filter. However, different from the Wiener filter or other norm-based filtering algorithms, batch normalization layer are not performing on data and only one time, but working on latent features periodically. Since latent features do not have a well-known information (e.g total variance, general total variance and etc.), deep filters like DNNs attempt to normal the latent features by their own means and variance. In this way, the deep denoising algorithms can be described as:
+
+\begin{equation}
+    x^{*} = arg min_{X,K,\gamma,\beta} \{||(T(y) - X \odot K)||^p + \gamma [\frac{X-E(X)}{\sqrt{Va(X)}})+\beta]\}
+    \label{eq:deep_denoising}
+\end{equation}
