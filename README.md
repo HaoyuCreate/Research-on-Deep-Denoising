@@ -21,11 +21,13 @@ This tutorial depends on the following libraries:
 * Numpy
 
 #### Training
-cd ./Pytorch_V1 \\
+cd ./Pytorch_V1  
+
 python train.py
 
 #### Testing
-cd ./Pytorch_V1 \\
+cd ./Pytorch_V1  
+
 python test.py
 
 
@@ -51,7 +53,8 @@ Use the trained model to denoise self-synthesied noisy 1D signals. Network is pr
 python pth2h5.py
 
 ### Testing
-cd ./Numpy_V2 \\
+cd ./Numpy_V2  
+
 python Numpy_test.py
 
 #### Results
