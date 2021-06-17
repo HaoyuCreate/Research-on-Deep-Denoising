@@ -1,6 +1,8 @@
 # Research-on-Deep-Denoising
 
-The architecture was inspired by [U-Net: Convolutional Networks for Biomedical Image Segmentation](http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/).
+Neural networks have achieved superior performance in various important tasks. However, lack of the interpretability makes the neural networks still a black box for most of the users. The black-box nature becomes the Achille's heel of neural network for full-exploitation. Triggered by these challenges, I focus on signal denoising tasks and propose an end-to-end-trained network guided by task-based knowledge that transforms input data into an integrated and ordered representative in high-dimensional feature space.
+
+Moreover, to understand how a deep neural network (DNN) performs like a filter in the signal denoising task, I re-implemented a forward branch of the testing process of the forementioned network by Numpy only. While implementing the network, I also obverse some interesting facts of the DNN which triggers me to have some new thoughts (i.e. batch normalization layer with adjustable sparse regularization) on improving DNN. In the future study, I will try to conclude a general form of unsupervised deep neural networks for denoising tasks, which are more close to blind denoising approaches in practice. Besides, many advanced adaptive filtering algorithms with sparse regularization will be tested to take the place of the traditional batch normalization layers and further improve the capability of deep neural networks.
 
 ---
 
