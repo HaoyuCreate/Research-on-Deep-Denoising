@@ -8,7 +8,11 @@ Moreover, to understand how a deep neural network (DNN) performs like a filter i
 
 ## Overview
 
-### 1. Pytorch Version
+### 1. Datasets
+The training dataset is provided in folder ./TrainSample.
+Randomly generated signals are usually used for testing. However, some testing samples are recorded in folder ./TestSamples 
+
+### 2. Pytorch Version
 #### Dependencies
 
 This tutorial depends on the following libraries:
@@ -37,7 +41,7 @@ Use the trained model to denoise self-synthesied noisy 1D signals. Network is pr
 
 
 
-### 2. Numpy Version
+### 3. Numpy Version
 #### Dependencies
 * Numpy
 * skimage
