@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 numpy
 scikit-image
 matplotlib
 h5py
+=======
+numpy==1.17.4
+scikit-image==0.17.2
+matplotlib==3.1.3
+h5py==2.10.0
+>>>>>>> b7882097d1439c91d0fa7ff027439c1a9e4be286
